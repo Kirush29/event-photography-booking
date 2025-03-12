@@ -3,11 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kiru/title>
+    <title>EventSnaps - Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <h1>villiam</h1>  
-  <img width="200" src="k.jpg" alt="">
-  <p>I am kirushan hi</p>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-logo">EventSnaps</div>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="./home.html" class="link active">Home</a></li>
+                <li><a href="#services" class="link">Services</a></li>
+                <li><a href="#portfolio" class="link">Portfolio</a></li>
+                <li><a href="#contact" class="link">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn sign-in"><a href="./sign-in.html">Sign In</a></button>
+            <button class="btn sign-up"><a href="./signup.html">Sign Up</a></button>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Signup Form -->
+    <div class="wrapper">
+        <div class="form-box animate-form">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <div class="input-box">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="First Name" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Last Name" required>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" id="password" required>
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword()"></i>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="terms">
+                    <label><input type="checkbox" name="remember"> Remember Me</label>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+                <p class="login-link">Already have an account? <a href="./sign-in.html">Sign In</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 EventSnaps. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Password toggle visibility
+        function togglePassword() {
+            const password = document.getElementById('password');
+            const toggleIcon = document.querySelector('.toggle-password');
+            if (password.type === 'password') {
+                password.type = 'text';
+                toggleIcon.classList.replace('fa-eye', 'fa-eye-slash');
+            } else {
+                password.type = 'password';
+                toggleIcon.classList.replace('fa-eye-slash', 'fa-eye');
+            }
+        }
+
+        // Form submission (placeholder)
+        document.getElementById('signup-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Registration successful! Please check your email for confirmation.');
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

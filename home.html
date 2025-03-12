@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventSnaps - Premium Photography & Videography</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">EventSnaps</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#" class="book-now">Book Now</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="animate-text">Capture Life's Moments in Stunning Detail</h1>
+            <p class="animate-text delay-1">Professional Photography & Videography Services</p>
+            <a href="#" class="cta-button book-now animate-text delay-2">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Premium Services</h2>
+        <div class="service-grid">
+            <div class="service-card animate-card">
+                <i class="fas fa-camera"></i>
+                <h3>Event Photography</h3>
+                <p>High-resolution captures for all occasions</p>
+            </div>
+            <div class="service-card animate-card delay-1">
+                <i class="fas fa-video"></i>
+                <h3>Cinematic Videography</h3>
+                <p>4K video production with drone footage</p>
+            </div>
+            <div class="service-card animate-card delay-2">
+                <i class="fas fa-edit"></i>
+                <h3>Post-Production</h3>
+                <p>Professional editing and enhancement</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <h2>Our Work</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item animate-card"><img src="https://source.unsplash.com/random/400x300/?wedding" alt="Wedding"></div>
+            <div class="portfolio-item animate-card delay-1"><img src="https://source.unsplash.com/random/400x300/?corporate" alt="Corporate"></div>
+            <div class="portfolio-item animate-card delay-2"><img src="https://source.unsplash.com/random/400x300/?event" alt="Event"></div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="booking-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Book Your Session</h2>
+            <form id="booking-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="date" placeholder="Event Date" required>
+                <select required>
+                    <option value="">Select Service</option>
+                    <option value="photography">Photography</option>
+                    <option value="videography">Videography</option>
+                    <option value="both">Both</option>
+                </select>
+                <textarea placeholder="Additional Details" rows="4"></textarea>
+                <button type="submit" class="cta-button">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 EventSnaps. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
